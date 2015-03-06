@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>openui5</artifactId>
-    <version>1.26.7-SNAPSHOT</version>
+    <version>1.26.7</version>
     <name>OpenUI5</name>
     <description>WebJar for OpenUI5</description>
     <url>http://webjars.org</url>
@@ -21,7 +21,7 @@
         <upstream.version>1.26.7</upstream.version>
         <upstream.url>https://openui5.hana.ondemand.com/downloads</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
-        <requirejs/>
+        <requirejs />
     </properties>
 
     <developers>
@@ -49,7 +49,7 @@
         <url>http://github.com/webjars/openui5</url>
         <connection>scm:git:https://github.com/webjars/openui5.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/openui5.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>openui5-1.26.7</tag>
     </scm>
     
     <build>
@@ -82,11 +82,11 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/resources"/>
+                                    <fileset dir="${project.build.directory}/resources" />
                                 </move>
                             </target>
                         </configuration>
