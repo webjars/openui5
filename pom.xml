@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>openui5</artifactId>
-    <version>1.28.17</version>
+    <version>1.28.18-SNAPSHOT</version>
     <name>OpenUI5</name>
     <description>WebJar for OpenUI5</description>
     <url>http://webjars.org</url>
@@ -49,7 +49,7 @@
         <url>http://github.com/webjars/openui5</url>
         <connection>scm:git:https://github.com/webjars/openui5.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/openui5.git</developerConnection>
-        <tag>openui5-1.28.17</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <build>
