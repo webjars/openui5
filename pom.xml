@@ -57,7 +57,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>wagon-maven-plugin</artifactId>
-                <version>1.0-beta-4</version>
+                <version>1.0</version>
                 <executions>
                     <execution>
                         <phase>process-resources</phase>
@@ -66,7 +66,7 @@
                         </goals>
                         <configuration>
                             <url>${upstream.url}</url>
-                            <fromFile>openui5-runtime-${upstream.version}.zip</fromFile>
+                            <fromFile>openui5-sdk-${upstream.version}.zip</fromFile>
                             <toFile>${project.build.directory}/${project.artifactId}.zip</toFile>
                         </configuration>
                     </execution>
@@ -87,6 +87,9 @@
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
                                     <fileset dir="${project.build.directory}/resources" />
+                                </move>
+                                <move todir="${project.build.outputDirectory}/META-INF/">
+                                  <fileset dir="${project.build.directory}/downloads/schemas" />
                                 </move>
                             </target>
                         </configuration>
