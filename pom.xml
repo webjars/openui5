@@ -11,14 +11,14 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>openui5</artifactId>
-    <version>1.60.3-SNAPSHOT</version>
+    <version>1.52.30-SNAPSHOT</version>
     <name>OpenUI5</name>
     <description>WebJar for OpenUI5</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.url>https://openui5.hana.ondemand.com/downloads/openui5-sdk-${version.unsnapshot}.zip</upstream.url>
+        <upstream.url>https://github.com/SAP/openui5/releases/download/${version.unsnapshot}/openui5-sdk-${version.unsnapshot}.zip</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs />
     </properties>
