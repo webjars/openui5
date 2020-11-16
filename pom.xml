@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>openui5</artifactId>
-    <version>1.71.17-SNAPSHOT</version>
+    <version>1.84.0-SNAPSHOT</version>
     <name>OpenUI5</name>
     <description>WebJar for OpenUI5</description>
     <url>http://webjars.org</url>
@@ -78,13 +78,10 @@
                                 <echo message="downloading" />
                                 <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
                                 <echo message="unzip archive" />
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}/${project.artifactId}-${version.unsnapshot}"/>
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/resources" />
-                                </move>
-                                <move todir="${project.build.outputDirectory}/META-INF/">
-                                  <fileset dir="${project.build.directory}/downloads/schemas" />
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${version.unsnapshot}" excludes="test-resources/,docs/"/>
                                 </move>
                             </target>
                         </configuration>
@@ -108,6 +105,12 @@
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
             </plugin>
         </plugins>
     </build>
