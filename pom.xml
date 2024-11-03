@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>openui5</artifactId>
-    <version>1.120.11-SNAPSHOT</version>
+    <version>1.120.22-SNAPSHOT</version>
     <name>OpenUI5</name>
     <description>WebJar for OpenUI5</description>
     <url>http://webjars.org</url>
